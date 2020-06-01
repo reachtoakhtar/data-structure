@@ -1,5 +1,6 @@
 import logging
 
+from linked_list.exception import EmptyListError, RangeError
 from linked_list.node import NodeSingle
 
 __author__ = "akhtar"
@@ -46,3 +47,26 @@ class SingleLinkedList:
                 pointer = pointer.get_next()
 
             pointer.set_next(node)
+
+    def insert_at_position(self, position, data):
+        """ Position is 1 based. """
+        if self.head is None:
+            raise EmptyListError("List is empty, can't insert.")
+        else:
+            list_length = self.get_length()
+            if not (1 <= position <= list_length + 1):
+                raise RangeError("Position range must be 1 through {0}.".format(
+                    list_length + 1))
+
+            if position == 1:
+                self.insert_at_beginning(data)
+            else:
+                pointer = self.head
+                pos = 1
+                while pos != position - 1:
+                    pointer = pointer.get_next()
+                    pos += 1
+
+                node = NodeSingle(data)
+                node.set_next(pointer.get_next())
+                pointer.set_next(node)
