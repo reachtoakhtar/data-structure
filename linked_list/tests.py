@@ -42,6 +42,10 @@ class TestSingleLinkedList(unittest.TestCase):
         print("After inserting 38 at the end: " + self.single.get_list())
         self.assertEqual(self.single.get_list(), "38")
 
+        self.single.insert_at_end(92)
+        print("After inserting 92 at the end: " + self.single.get_list())
+        self.assertEqual(self.single.get_list(), "38 ==> 92")
+
 
 if __name__ == "__main__":
     unittest.main()
