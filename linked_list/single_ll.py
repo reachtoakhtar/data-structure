@@ -103,3 +103,26 @@ class SingleLinkedList:
                 steps += 1
 
             previous.set_next(None)
+
+    def delete_at_position(self, position):
+        """ Position is 1 based. """
+        if self.head is None:
+            raise EmptyListError("List is empty, can't delete.")
+
+        list_length = self.get_length()
+        if not (1 <= position <= list_length):
+            raise RangeError("Position range must be 1 through {0}.".format(
+                list_length))
+
+        if position == 1:
+            self.delete_at_beginning()
+        else:
+            pointer = self.head
+            pos = 1
+            while pos != position - 1:
+                pointer = pointer.get_next()
+                pos += 1
+
+            next = pointer.get_next().get_next()
+            pointer.get_next().set_next(None)
+            pointer.set_next(next)

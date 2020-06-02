@@ -165,6 +165,49 @@ class TestSingleLinkedList(unittest.TestCase):
 
         print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
 
+    def test_delete_at_position(self):
+        print("TEST DELETE AT POSITION")
+        print("===========================================================")
+
+        print("List to operate: <Empty list>" + self.single.get_list())
+        try:
+            self.single.delete_at_position(1)
+        except EmptyListError as e:
+            print(str(e) + "\n")
+
+        self.single.insert_at_beginning(5)
+        print("List to operate: " + self.single.get_list())
+        self.single.delete_at_position(1)
+        print("After deleting a node at position 1: <Empty list>\n")
+        self.assertEqual(self.single.get_list(), "")
+
+        self.create_list()
+        print("List to operate: " + self.single.get_list())
+        self.single.delete_at_position(3)
+        print("After deleting a node at position 3: " + self.single.get_list())
+        self.assertEqual(
+            self.single.get_list(),
+            "5 ==> 10 ==> 27 ==> 99")
+
+        self.single.delete_at_position(4)
+        print("After deleting a node at position 4: " + self.single.get_list())
+        self.assertEqual(
+            self.single.get_list(),
+            "5 ==> 10 ==> 27")
+
+        try:
+            self.single.delete_at_position(0)
+        except RangeError as e:
+            print("Can't delete at position 0. " + str(e))
+
+        try:
+            self.single.delete_at_position(self.single.get_length() + 1)
+        except RangeError as e:
+            print("Can't delete at position {0}. {1}".format(
+                self.single.get_length() + 1, str(e)))
+
+        print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
+
 
 if __name__ == "__main__":
     unittest.main()
