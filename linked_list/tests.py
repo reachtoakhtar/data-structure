@@ -123,6 +123,12 @@ class TestSingleLinkedList(unittest.TestCase):
         except EmptyListError as e:
             print(str(e) + "\n")
 
+        self.single.insert_at_beginning(5)
+        print("List to operate: " + self.single.get_list())
+        self.single.delete_at_beginning()
+        print("After deleting a node in the beginning: <Empty list>\n")
+        self.assertEqual(self.single.get_list(), "")
+
         self.create_list()
         print("List to operate: " + self.single.get_list())
         self.single.delete_at_beginning()
@@ -130,6 +136,32 @@ class TestSingleLinkedList(unittest.TestCase):
         self.assertEqual(
             self.single.get_list(),
             "10 ==> 2 ==> 27 ==> 99")
+
+        print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
+
+    def test_delete_at_end(self):
+        print("TEST DELETE AT END")
+        print("===========================================================")
+
+        print("List to operate: <Empty list>" + self.single.get_list())
+        try:
+            self.single.delete_at_end()
+        except EmptyListError as e:
+            print(str(e) + "\n")
+
+        self.single.insert_at_beginning(5)
+        print("List to operate: " + self.single.get_list())
+        self.single.delete_at_end()
+        print("After deleting a node at the end: <Empty list>\n")
+        self.assertEqual(self.single.get_list(), "")
+
+        self.create_list()
+        print("List to operate: " + self.single.get_list())
+        self.single.delete_at_end()
+        print("After deleting a node at the end: " + self.single.get_list())
+        self.assertEqual(
+            self.single.get_list(),
+            "5 ==> 10 ==> 2 ==> 27")
 
         print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
 

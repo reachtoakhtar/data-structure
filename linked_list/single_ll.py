@@ -76,5 +76,30 @@ class SingleLinkedList:
             raise EmptyListError("List is empty, can't delete.")
 
         temp = self.head
-        self.head = self.head.get_next()
-        temp = None
+        self.head = temp.get_next()
+        temp.set_next(None)
+
+    def delete_at_end(self):
+        if self.head is None:
+            raise EmptyListError("List is empty, can't delete.")
+
+        list_length = self.get_length()
+        if list_length == 1:
+            self.delete_at_beginning()
+        else:
+            # Keep track of 2 pointers, one is the traversing and
+            # the other one is the node previous to it. The `previous`
+            # moves 1 step ahead after `pointer` has moved 2 steps.
+            pointer = self.head
+            previous = self.head
+            steps = 1
+
+            while pointer.get_next():
+                pointer = pointer.get_next()
+                if steps == 2:
+                    previous = previous.get_next()
+                    steps = 1
+
+                steps += 1
+
+            previous.set_next(None)
