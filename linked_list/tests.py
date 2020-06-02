@@ -23,6 +23,9 @@ class TestSingleLinkedList(unittest.TestCase):
         # 5 ==> 10 ==> 2 ==> 27 ==> 99
 
     def test_insert_at_beginning(self):
+        print("TEST INSERT AT BEGINNING")
+        print("===========================================================")
+
         print("List to operate: <Empty list>")
         self.single.insert_at_beginning(22)
         print("After inserting 22 in the beginning: " + self.single.get_list())
@@ -33,12 +36,17 @@ class TestSingleLinkedList(unittest.TestCase):
         self.create_list()
         print("List to operate: " + self.single.get_list())
         self.single.insert_at_beginning(24)
-        print("After inserting 24 in the beginning: " + self.single.get_list() + "\n")
+        print("After inserting 24 in the beginning: " + self.single.get_list())
         self.assertEqual(
             self.single.get_list(),
             "24 ==> 5 ==> 10 ==> 2 ==> 27 ==> 99")
 
+        print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
+
     def test_insert_at_end(self):
+        print("TEST INSERT AT END")
+        print("===========================================================")
+
         print("List to operate: <Empty list>" + self.single.get_list())
         self.single.insert_at_end(38)
         print("After inserting 38 at the end: " + self.single.get_list())
@@ -49,10 +57,15 @@ class TestSingleLinkedList(unittest.TestCase):
         self.assertEqual(self.single.get_list(), "38 ==> 92")
 
         self.single.insert_at_end(3)
-        print("After inserting 3 at the end: " + self.single.get_list() + "\n")
+        print("After inserting 3 at the end: " + self.single.get_list())
         self.assertEqual(self.single.get_list(), "38 ==> 92 ==> 3")
 
+        print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
+
     def test_insert_at_position(self):
+        print("TEST INSERT AT POSITION")
+        print("===========================================================")
+
         print("List to operate: <Empty list>" + self.single.get_list())
         try:
             self.single.insert_at_position(1, 23)
@@ -97,6 +110,28 @@ class TestSingleLinkedList(unittest.TestCase):
         except RangeError as e:
             print("Can't insert at position {0}. {1}".format(
                 self.single.get_length() + 2, str(e)))
+
+        print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
+
+    def test_delete_at_beginning(self):
+        print("TEST DELETE AT BEGINNING")
+        print("===========================================================")
+
+        print("List to operate: <Empty list>" + self.single.get_list())
+        try:
+            self.single.delete_at_beginning()
+        except EmptyListError as e:
+            print(str(e) + "\n")
+
+        self.create_list()
+        print("List to operate: " + self.single.get_list())
+        self.single.delete_at_beginning()
+        print("After deleting a node in the beginning: " + self.single.get_list())
+        self.assertEqual(
+            self.single.get_list(),
+            "10 ==> 2 ==> 27 ==> 99")
+
+        print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
 
 
 if __name__ == "__main__":

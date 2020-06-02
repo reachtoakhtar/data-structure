@@ -52,21 +52,29 @@ class SingleLinkedList:
         """ Position is 1 based. """
         if self.head is None:
             raise EmptyListError("List is empty, can't insert.")
+
+        list_length = self.get_length()
+        if not (1 <= position <= list_length + 1):
+            raise RangeError("Position range must be 1 through {0}.".format(
+                list_length + 1))
+
+        if position == 1:
+            self.insert_at_beginning(data)
         else:
-            list_length = self.get_length()
-            if not (1 <= position <= list_length + 1):
-                raise RangeError("Position range must be 1 through {0}.".format(
-                    list_length + 1))
+            pointer = self.head
+            pos = 1
+            while pos != position - 1:
+                pointer = pointer.get_next()
+                pos += 1
 
-            if position == 1:
-                self.insert_at_beginning(data)
-            else:
-                pointer = self.head
-                pos = 1
-                while pos != position - 1:
-                    pointer = pointer.get_next()
-                    pos += 1
+            node = NodeSingle(data)
+            node.set_next(pointer.get_next())
+            pointer.set_next(node)
 
-                node = NodeSingle(data)
-                node.set_next(pointer.get_next())
-                pointer.set_next(node)
+    def delete_at_beginning(self):
+        if self.head is None:
+            raise EmptyListError("List is empty, can't delete.")
+
+        temp = self.head
+        self.head = self.head.get_next()
+        temp = None
