@@ -2,7 +2,7 @@ import logging
 import unittest
 
 from linked_list.exception import EmptyListError, RangeError
-from linked_list.single_ll import SingleLinkedList
+from linked_list.lists import DoubleLinkedList, SingleLinkedList
 
 __author__ = "akhtar"
 
@@ -23,7 +23,7 @@ class TestSingleLinkedList(unittest.TestCase):
         # 5 ==> 10 ==> 2 ==> 27 ==> 99
 
     def test_insert_at_beginning(self):
-        print("TEST INSERT AT BEGINNING")
+        print("TEST INSERT AT BEGINNING - SINGLE LINKED LIST")
         print("===========================================================")
 
         print("List to operate: <Empty list>")
@@ -44,7 +44,7 @@ class TestSingleLinkedList(unittest.TestCase):
         print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
 
     def test_insert_at_end(self):
-        print("TEST INSERT AT END")
+        print("TEST INSERT AT END - SINGLE LINKED LIST")
         print("===========================================================")
 
         print("List to operate: <Empty list>" + self.single.get_list())
@@ -63,7 +63,7 @@ class TestSingleLinkedList(unittest.TestCase):
         print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
 
     def test_insert_at_position(self):
-        print("TEST INSERT AT POSITION")
+        print("TEST INSERT AT POSITION - SINGLE LINKED LIST")
         print("===========================================================")
 
         print("List to operate: <Empty list>" + self.single.get_list())
@@ -114,7 +114,7 @@ class TestSingleLinkedList(unittest.TestCase):
         print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
 
     def test_delete_at_beginning(self):
-        print("TEST DELETE AT BEGINNING")
+        print("TEST DELETE AT BEGINNING - SINGLE LINKED LIST")
         print("===========================================================")
 
         print("List to operate: <Empty list>" + self.single.get_list())
@@ -140,7 +140,7 @@ class TestSingleLinkedList(unittest.TestCase):
         print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
 
     def test_delete_at_end(self):
-        print("TEST DELETE AT END")
+        print("TEST DELETE AT END - SINGLE LINKED LIST")
         print("===========================================================")
 
         print("List to operate: <Empty list>" + self.single.get_list())
@@ -166,7 +166,7 @@ class TestSingleLinkedList(unittest.TestCase):
         print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
 
     def test_delete_at_position(self):
-        print("TEST DELETE AT POSITION")
+        print("TEST DELETE AT POSITION - SINGLE LINKED LIST")
         print("===========================================================")
 
         print("List to operate: <Empty list>" + self.single.get_list())
