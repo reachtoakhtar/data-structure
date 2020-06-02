@@ -2,7 +2,7 @@ import logging
 import unittest
 
 from linked_list.exception import EmptyListError, RangeError
-from linked_list.lists import DoubleLinkedList, SingleLinkedList
+from linked_list.lists import SingleLinkedList
 
 __author__ = "akhtar"
 
