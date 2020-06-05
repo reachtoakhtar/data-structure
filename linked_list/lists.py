@@ -1,11 +1,7 @@
-import logging
-
 from linked_list.exception import EmptyListError, RangeError
 from linked_list.node import NodeCircular, NodeDouble, NodeSingle
 
 __author__ = "akhtar"
-
-logger = logging.getLogger(__name__)
 
 
 class SingleLinkedList:
