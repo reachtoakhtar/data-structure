@@ -1,9 +1,8 @@
 import unittest
 
-from linked_list.exception import EmptyListError, RangeError
+from linked_list.exception import EmptyListError
 from linked_list.lists import SingleLinkedList
 from linked_list.problems.floyd_cycle_finding_algorithm import loop_in_a_list
-from linked_list.problems.nth_node_from_end import nth_node_from_end
 
 __author__ = "akhtar"
 
