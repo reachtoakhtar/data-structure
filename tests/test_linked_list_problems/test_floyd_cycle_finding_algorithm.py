@@ -62,9 +62,9 @@ class TestFloydCycleFindingAlgorithm(unittest.TestCase):
         pointer.set_next(loop_start_node)
 
         print("List:")
-        print("                     \u21D7 99 ==> 32 ==> 61 \u21D8")
-        print("5 ==> 1 ==> 23 ==> 27                    33")
-        print("                     \u21D6 43 <== 47 <== 87 \u21D9")
+        print("                    \u2197 99 \u27F6 32 \u27F6 61 \u2198")
+        print("5 \u27F6 1 \u27F6 23 \u27F6 27                    33")
+        print("                    \u2196 43 \u27F5 47 \u27F5 87 \u2199")
 
         is_cyclic, data = loop_in_a_list(self.linked_list)
         print("\nLoop exists with start node at {0}.".format(27))
