@@ -9,7 +9,7 @@ def nth_node_from_end(linked_list, n):
     Hint: For a linked list of size m, nth node from end would be
     (m - n + 1)th node from beginning.
 
-    :param SingleLinkedList linked_list: The person sending the message.
+    :param SingleLinkedList linked_list: The linked list to operate.
     :param int n: The position from end.
     :return: the data of the node.
     :rtype: int
@@ -41,7 +41,7 @@ def nth_node_from_end_single_scan(linked_list, n):
     Hint: For a linked list of size m, nth node from end would be
     (m - n + 1)th node from beginning.
 
-    :param SingleLinkedList linked_list: The person sending the message.
+    :param SingleLinkedList linked_list: The linked list to operate.
     :param int n: The position from end.
     :return: the data of the node.
     :rtype: int

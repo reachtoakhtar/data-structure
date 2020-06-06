@@ -2,7 +2,8 @@ import unittest
 
 from linked_list.exception import EmptyListError
 from linked_list.lists import SingleLinkedList
-from linked_list.problems.floyd_cycle_finding_algorithm import loop_in_a_list
+from linked_list.problems.floyd_cycle_finding_algorithm import \
+    lenth_of_the_loop, loop_in_a_list
 
 __author__ = "akhtar"
 
@@ -37,6 +38,9 @@ class TestFloydCycleFindingAlgorithm(unittest.TestCase):
         except EmptyListError as e:
             print(str(e), end=">\n\n")
 
+        # ======================
+        # Test with a list.
+        # ======================
         self.create_list()
         print("List: " + self.linked_list.get_list())
 
@@ -63,9 +67,49 @@ class TestFloydCycleFindingAlgorithm(unittest.TestCase):
         print("                     \u21D6 43 <== 47 <== 87 \u21D9")
 
         is_cyclic, data = loop_in_a_list(self.linked_list)
-        print("\nLoop exists at node with data = {0}.".format(27), end="\n")
+        print("\nLoop exists with start node at {0}.".format(27))
         self.assertEqual(is_cyclic, True)
         self.assertEqual(data, 27)
+
+        loop_length = lenth_of_the_loop(self.linked_list)
+        print("Length of the loop = {0}.\n\n".format(loop_length))
+        self.assertEqual(loop_length, 8)
+
+        # ======================
+        # Test with another list.
+        # ======================
+        self.linked_list = SingleLinkedList()
+        self.linked_list.insert_at_end(5)
+        self.linked_list.insert_at_end(1)
+        self.linked_list.insert_at_end(23)
+        self.linked_list.insert_at_end(48)
+
+        # Create loop at 3rd node in the list.
+        pointer = self.linked_list.head
+        position = 1
+        while position != 3:
+            pointer = pointer.get_next()
+            position += 1
+
+        loop_start_node = pointer
+        while pointer.get_next():
+            pointer = pointer.get_next()
+
+        pointer.set_next(loop_start_node)
+
+        print("List:")
+        print("5 \u27F6 1 \u27F6 23 \u2500\u2500\u2510")
+        print("           \u2191    \u2193")
+        print("           \u2514\u2500\u2500 48")
+
+        is_cyclic, data = loop_in_a_list(self.linked_list)
+        print("\nLoop exists with start node at {0}.".format(27))
+        self.assertEqual(is_cyclic, True)
+        self.assertEqual(data, 23)
+
+        loop_length = lenth_of_the_loop(self.linked_list)
+        print("Length of the loop = {0}.".format(loop_length))
+        self.assertEqual(loop_length, 2)
 
         print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
 
