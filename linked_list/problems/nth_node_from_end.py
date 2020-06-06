@@ -5,7 +5,7 @@ __author__ = "akhtar"
 
 def nth_node_from_end(linked_list, n):
     """
-    Finds nth node from end of a linked list (assume positions as 1 based).
+    Find nth node from end of a linked list (assume positions as 1 based).
     Hint: For a linked list of size m, nth node from end would be
     (m - n + 1)th node from beginning.
 
@@ -37,7 +37,7 @@ def nth_node_from_end(linked_list, n):
 
 def nth_node_from_end_single_scan(linked_list, n):
     """
-    Finds nth node from end of a linked list (assume positions as 1 based).
+    Find nth node from end of a linked list (assume positions as 1 based).
     Hint: For a linked list of size m, nth node from end would be
     (m - n + 1)th node from beginning.
 
