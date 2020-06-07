@@ -19,7 +19,7 @@ class TestNthNodeFromEnd(unittest.TestCase):
         self.linked_list.insert_at_end(2)
         self.linked_list.insert_at_end(27)
         self.linked_list.insert_at_end(99)
-        # 5 ==> 10 ==> 2 ==> 27 ==> 99
+        # 5 --> 10 --> 2 --> 27 --> 99
 
     def test_nth_from_end_two_scans(self):
         print("TEST NTH NODE FROM END - TWO SCANS")

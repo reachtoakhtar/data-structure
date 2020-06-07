@@ -25,7 +25,7 @@ class TestFloydCycleFindingAlgorithm(unittest.TestCase):
         self.linked_list.insert_at_end(87)
         self.linked_list.insert_at_end(47)
         self.linked_list.insert_at_end(43)
-        # 5 ==> 1 ==> 23 ==> 27 ==> 99 ==> 32 ==> 61 ==> 33 ==> 87 ==> 47 ==> 43
+        # 5 --> 1 --> 23 --> 27 --> 99 --> 32 --> 61 --> 33 --> 87 --> 47 --> 43
 
     def test_loop_in_a_list(self):
         print("TEST LOOP IN A LIST - FLOYD CYCLE FINDING ALGORITHM")

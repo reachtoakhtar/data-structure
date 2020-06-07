@@ -23,10 +23,11 @@ class SingleLinkedList:
         str_list = ""
         node = self.head
         while node:
-            str_list += str(node.get_data()) + " ==> "
+            str_list += str(node.get_data()) + " \u27F6 "
             node = node.get_next()
 
-        return str_list[:len(str_list) - 5]
+        str_list = str_list[::-1].replace(" \u27F6 ", "", 1)
+        return str_list[::-1]
 
     def insert_at_beginning(self, data):
         node = NodeSingle(data)
@@ -143,10 +144,11 @@ class DoubleLinkedList:
         str_list = ""
         node = self.head
         while node:
-            str_list += str(node.get_data()) + " <==> "
+            str_list += str(node.get_data()) + " \u27F7 "
             node = node.get_next()
 
-        return str_list[:len(str_list) - 6]
+        str_list = str_list[::-1].replace(" \u27F7 ", "", 1)
+        return str_list[::-1]
 
     def insert_at_beginning(self, data):
         node = NodeDouble(data)
@@ -259,7 +261,7 @@ class CircularLinkedList:
         str_list = ""
         node = self.head
         while node:
-            str_list += str(node.get_data()) + " ==> "
+            str_list += str(node.get_data()) + " \u27F6 "
             node = node.get_next()
             if node == self.head:
                 break
@@ -268,7 +270,8 @@ class CircularLinkedList:
         if list_length == 0:
             return ""
         elif list_length == 1:
-            return str_list[:len(str_list) - 5]
+            str_list = str_list[::-1].replace(" \u27F6 ", "", 1)
+            return str_list[::-1]
         else:
             return str_list[:len(str_list)] + str(self.head.data)
 
