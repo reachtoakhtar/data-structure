@@ -1,10 +1,8 @@
 import unittest
 
-from linked_list.exception import EmptyListError, RangeError
+from linked_list.exception import EmptyListError
 from linked_list.lists import SingleLinkedList
 from linked_list.problems.insert_into_sorted_list import insert_into_sorted_list
-from linked_list.problems.nth_node_from_end import nth_node_from_end, \
-    nth_node_from_end_single_scan
 
 __author__ = "akhtar"
 
