@@ -44,16 +44,16 @@ class TestNthNodeFromEnd(unittest.TestCase):
         print("List: " + self.linked_list.get_list())
 
         n = nth_node_from_end(self.linked_list, 2)
-        print("n = 2, Node =", n)
         self.assertEqual(n, 27)
+        print("n = 2, Node =", n)
 
         n = nth_node_from_end(self.linked_list, 5)
-        print("n = 5, Node =", n)
         self.assertEqual(n, 5)
+        print("n = 5, Node =", n)
 
         n = nth_node_from_end(self.linked_list, 1)
-        print("n = 1, Node =", n)
         self.assertEqual(n, 99)
+        print("n = 1, Node =", n)
 
         try:
             print("n = 0, Node = Not found <", end="")
@@ -92,16 +92,16 @@ class TestNthNodeFromEnd(unittest.TestCase):
         print("List: " + self.linked_list.get_list())
 
         n = nth_node_from_end_single_scan(self.linked_list, 2)
-        print("n = 2, Node =", n)
         self.assertEqual(n, 27)
+        print("n = 2, Node =", n)
 
         n = nth_node_from_end_single_scan(self.linked_list, 5)
-        print("n = 5, Node =", n)
         self.assertEqual(n, 5)
+        print("n = 5, Node =", n)
 
         n = nth_node_from_end_single_scan(self.linked_list, 1)
-        print("n = 1, Node =", n)
         self.assertEqual(n, 99)
+        print("n = 1, Node =", n)
 
         try:
             print("n = 0, Node = Not found <", end="")

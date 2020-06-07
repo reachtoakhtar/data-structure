@@ -45,8 +45,8 @@ class TestFloydCycleFindingAlgorithm(unittest.TestCase):
         print("List: " + self.linked_list.get_list())
 
         is_cyclic, data = loop_in_a_list(self.linked_list)
-        print("Loop does not exist.", end="\n\n")
         self.assertEqual(is_cyclic, False)
+        print("Loop does not exist.", end="\n\n")
 
         # Create loop at 4th node in the list.
         pointer = self.linked_list.head
@@ -67,13 +67,13 @@ class TestFloydCycleFindingAlgorithm(unittest.TestCase):
         print("                    \u2196 43 \u27F5 47 \u27F5 87 \u2199")
 
         is_cyclic, data = loop_in_a_list(self.linked_list)
-        print("\nLoop exists with start node at {0}.".format(27))
         self.assertEqual(is_cyclic, True)
         self.assertEqual(data, 27)
+        print("\nLoop exists with start node at {0}.".format(27))
 
         loop_length = lenth_of_the_loop(self.linked_list)
-        print("Length of the loop = {0}.\n\n".format(loop_length))
         self.assertEqual(loop_length, 8)
+        print("Length of the loop = {0}.\n\n".format(loop_length))
 
         # ======================
         # Test with another list.
@@ -103,13 +103,13 @@ class TestFloydCycleFindingAlgorithm(unittest.TestCase):
         print("           \u2514\u2500\u2500 48")
 
         is_cyclic, data = loop_in_a_list(self.linked_list)
-        print("\nLoop exists with start node at {0}.".format(27))
         self.assertEqual(is_cyclic, True)
         self.assertEqual(data, 23)
+        print("\nLoop exists with start node at {0}.".format(27))
 
         loop_length = lenth_of_the_loop(self.linked_list)
-        print("Length of the loop = {0}.".format(loop_length))
         self.assertEqual(loop_length, 2)
+        print("Length of the loop = {0}.".format(loop_length))
 
         print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
 

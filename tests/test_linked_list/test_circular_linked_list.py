@@ -27,16 +27,16 @@ class TestCircularLinkedList(unittest.TestCase):
         self.circular.insert_at_beginning(22)
         print("After inserting 22 in the beginning: " + self.circular.get_list())
         self.circular.insert_at_beginning(39)
-        print("After inserting 39 in the beginning: " + self.circular.get_list() + "\n")
         self.assertEqual(self.circular.get_list(), "39 \u27F6 22 \u27F6 39")
+        print("After inserting 39 in the beginning: " + self.circular.get_list() + "\n")
 
         self.create_list()
         print("List to operate: " + self.circular.get_list())
         self.circular.insert_at_beginning(24)
-        print("After inserting 24 in the beginning: " + self.circular.get_list())
         self.assertEqual(
             self.circular.get_list(),
             "24 \u27F6 5 \u27F6 10 \u27F6 2 \u27F6 27 \u27F6 99 \u27F6 24")
+        print("After inserting 24 in the beginning: " + self.circular.get_list())
 
         print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
 
@@ -46,16 +46,16 @@ class TestCircularLinkedList(unittest.TestCase):
 
         print("List to operate: <Empty list>" + self.circular.get_list())
         self.circular.insert_at_end(38)
-        print("After inserting 38 at the end: " + self.circular.get_list())
         self.assertEqual(self.circular.get_list(), "38")
+        print("After inserting 38 at the end: " + self.circular.get_list())
 
         self.circular.insert_at_end(92)
-        print("After inserting 92 at the end: " + self.circular.get_list())
         self.assertEqual(self.circular.get_list(), "38 \u27F6 92 \u27F6 38")
+        print("After inserting 92 at the end: " + self.circular.get_list())
 
         self.circular.insert_at_end(3)
-        print("After inserting 3 at the end: " + self.circular.get_list())
         self.assertEqual(self.circular.get_list(), "38 \u27F6 92 \u27F6 3 \u27F6 38")
+        print("After inserting 3 at the end: " + self.circular.get_list())
 
         print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
 
@@ -72,30 +72,30 @@ class TestCircularLinkedList(unittest.TestCase):
         self.create_list()
         print("List to operate: " + self.circular.get_list())
         self.circular.insert_at_position(1, 92)
-        print("After inserting 92 at position 1: " + self.circular.get_list())
         self.assertEqual(
             self.circular.get_list(),
             "92 \u27F6 5 \u27F6 10 \u27F6 2 \u27F6 27 \u27F6 99 \u27F6 92")
+        print("After inserting 92 at position 1: " + self.circular.get_list())
 
         self.circular.insert_at_position(3, 34)
-        print("After inserting 34 at position 3: : " + self.circular.get_list())
         self.assertEqual(
             self.circular.get_list(),
             "92 \u27F6 5 \u27F6 34 \u27F6 10 \u27F6 2 \u27F6 27 \u27F6 99 \u27F6 92")
+        print("After inserting 34 at position 3: : " + self.circular.get_list())
 
         self.circular.insert_at_position(self.circular.get_length(), 61)
-        print("After inserting 61 at position {0}: {1} ".format(
-            self.circular.get_length() - 1, self.circular.get_list()))
         self.assertEqual(
             self.circular.get_list(),
             "92 \u27F6 5 \u27F6 34 \u27F6 10 \u27F6 2 \u27F6 27 \u27F6 61 \u27F6 99 \u27F6 92")
+        print("After inserting 61 at position {0}: {1} ".format(
+            self.circular.get_length() - 1, self.circular.get_list()))
 
         self.circular.insert_at_position(self.circular.get_length() + 1, 44)
-        print("After inserting 44 at position {0}: {1} ".format(
-            self.circular.get_length() - 1, self.circular.get_list()))
         self.assertEqual(
             self.circular.get_list(),
             "92 \u27F6 5 \u27F6 34 \u27F6 10 \u27F6 2 \u27F6 27 \u27F6 61 \u27F6 99 \u27F6 44 \u27F6 92")
+        print("After inserting 44 at position {0}: {1} ".format(
+            self.circular.get_length() - 1, self.circular.get_list()))
 
         try:
             self.circular.insert_at_position(0, 93)
@@ -123,16 +123,16 @@ class TestCircularLinkedList(unittest.TestCase):
         self.circular.insert_at_beginning(5)
         print("List to operate: " + self.circular.get_list())
         self.circular.delete_at_beginning()
-        print("After deleting a node in the beginning: <Empty list>\n")
         self.assertEqual(self.circular.get_list(), "")
+        print("After deleting a node in the beginning: <Empty list>\n")
 
         self.create_list()
         print("List to operate: " + self.circular.get_list())
         self.circular.delete_at_beginning()
-        print("After deleting a node in the beginning: " + self.circular.get_list())
         self.assertEqual(
             self.circular.get_list(),
             "10 \u27F6 2 \u27F6 27 \u27F6 99 \u27F6 10")
+        print("After deleting a node in the beginning: " + self.circular.get_list())
 
         print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
 
@@ -149,16 +149,16 @@ class TestCircularLinkedList(unittest.TestCase):
         self.circular.insert_at_beginning(5)
         print("List to operate: " + self.circular.get_list())
         self.circular.delete_at_end()
-        print("After deleting a node at the end: <Empty list>\n")
         self.assertEqual(self.circular.get_list(), "")
+        print("After deleting a node at the end: <Empty list>\n")
 
         self.create_list()
         print("List to operate: " + self.circular.get_list())
         self.circular.delete_at_end()
-        print("After deleting a node at the end: " + self.circular.get_list())
         self.assertEqual(
             self.circular.get_list(),
             "5 \u27F6 10 \u27F6 2 \u27F6 27 \u27F6 5")
+        print("After deleting a node at the end: " + self.circular.get_list())
 
         print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
 
@@ -175,22 +175,22 @@ class TestCircularLinkedList(unittest.TestCase):
         self.circular.insert_at_beginning(5)
         print("List to operate: " + self.circular.get_list())
         self.circular.delete_at_position(1)
-        print("After deleting a node at position 1: <Empty list>\n")
         self.assertEqual(self.circular.get_list(), "")
+        print("After deleting a node at position 1: <Empty list>\n")
 
         self.create_list()
         print("List to operate: " + self.circular.get_list())
         self.circular.delete_at_position(3)
-        print("After deleting a node at position 3: " + self.circular.get_list())
         self.assertEqual(
             self.circular.get_list(),
             "5 \u27F6 10 \u27F6 27 \u27F6 99 \u27F6 5")
+        print("After deleting a node at position 3: " + self.circular.get_list())
 
         self.circular.delete_at_position(4)
-        print("After deleting a node at position 4: " + self.circular.get_list())
         self.assertEqual(
             self.circular.get_list(),
             "5 \u27F6 10 \u27F6 27 \u27F6 5")
+        print("After deleting a node at position 4: " + self.circular.get_list())
 
         try:
             self.circular.delete_at_position(0)

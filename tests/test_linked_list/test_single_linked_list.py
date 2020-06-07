@@ -25,18 +25,19 @@ class TestSingleLinkedList(unittest.TestCase):
 
         print("List to operate: <Empty list>")
         self.single.insert_at_beginning(22)
+        self.assertEqual(self.single.get_list(), "22")
         print("After inserting 22 in the beginning: " + self.single.get_list())
         self.single.insert_at_beginning(39)
-        print("After inserting 39 in the beginning: " + self.single.get_list() + "\n")
         self.assertEqual(self.single.get_list(), "39 \u27F6 22")
+        print("After inserting 39 in the beginning: " + self.single.get_list() + "\n")
 
         self.create_list()
         print("List to operate: " + self.single.get_list())
         self.single.insert_at_beginning(24)
-        print("After inserting 24 in the beginning: " + self.single.get_list())
         self.assertEqual(
             self.single.get_list(),
             "24 \u27F6 5 \u27F6 10 \u27F6 2 \u27F6 27 \u27F6 99")
+        print("After inserting 24 in the beginning: " + self.single.get_list())
 
         print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
 
@@ -46,16 +47,16 @@ class TestSingleLinkedList(unittest.TestCase):
 
         print("List to operate: <Empty list>" + self.single.get_list())
         self.single.insert_at_end(38)
-        print("After inserting 38 at the end: " + self.single.get_list())
         self.assertEqual(self.single.get_list(), "38")
+        print("After inserting 38 at the end: " + self.single.get_list())
 
         self.single.insert_at_end(92)
-        print("After inserting 92 at the end: " + self.single.get_list())
         self.assertEqual(self.single.get_list(), "38 \u27F6 92")
+        print("After inserting 92 at the end: " + self.single.get_list())
 
         self.single.insert_at_end(3)
-        print("After inserting 3 at the end: " + self.single.get_list())
         self.assertEqual(self.single.get_list(), "38 \u27F6 92 \u27F6 3")
+        print("After inserting 3 at the end: " + self.single.get_list())
 
         print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
 
@@ -72,30 +73,30 @@ class TestSingleLinkedList(unittest.TestCase):
         self.create_list()
         print("List to operate: " + self.single.get_list())
         self.single.insert_at_position(1, 92)
-        print("After inserting 92 at position 1: " + self.single.get_list())
         self.assertEqual(
             self.single.get_list(),
             "92 \u27F6 5 \u27F6 10 \u27F6 2 \u27F6 27 \u27F6 99")
+        print("After inserting 92 at position 1: " + self.single.get_list())
 
         self.single.insert_at_position(3, 34)
-        print("After inserting 34 at position 3: : " + self.single.get_list())
         self.assertEqual(
             self.single.get_list(),
             "92 \u27F6 5 \u27F6 34 \u27F6 10 \u27F6 2 \u27F6 27 \u27F6 99")
+        print("After inserting 34 at position 3: : " + self.single.get_list())
 
         self.single.insert_at_position(self.single.get_length(), 61)
-        print("After inserting 61 at position {0}: {1} ".format(
-            self.single.get_length() - 1, self.single.get_list()))
         self.assertEqual(
             self.single.get_list(),
             "92 \u27F6 5 \u27F6 34 \u27F6 10 \u27F6 2 \u27F6 27 \u27F6 61 \u27F6 99")
+        print("After inserting 61 at position {0}: {1} ".format(
+            self.single.get_length() - 1, self.single.get_list()))
 
         self.single.insert_at_position(self.single.get_length() + 1, 44)
-        print("After inserting 44 at position {0}: {1} ".format(
-            self.single.get_length() - 1, self.single.get_list()))
         self.assertEqual(
             self.single.get_list(),
             "92 \u27F6 5 \u27F6 34 \u27F6 10 \u27F6 2 \u27F6 27 \u27F6 61 \u27F6 99 \u27F6 44")
+        print("After inserting 44 at position {0}: {1} ".format(
+            self.single.get_length() - 1, self.single.get_list()))
 
         try:
             self.single.insert_at_position(0, 93)
@@ -123,16 +124,16 @@ class TestSingleLinkedList(unittest.TestCase):
         self.single.insert_at_beginning(5)
         print("List to operate: " + self.single.get_list())
         self.single.delete_at_beginning()
-        print("After deleting a node in the beginning: <Empty list>\n")
         self.assertEqual(self.single.get_list(), "")
+        print("After deleting a node in the beginning: <Empty list>\n")
 
         self.create_list()
         print("List to operate: " + self.single.get_list())
         self.single.delete_at_beginning()
-        print("After deleting a node in the beginning: " + self.single.get_list())
         self.assertEqual(
             self.single.get_list(),
             "10 \u27F6 2 \u27F6 27 \u27F6 99")
+        print("After deleting a node in the beginning: " + self.single.get_list())
 
         print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
 
@@ -149,16 +150,16 @@ class TestSingleLinkedList(unittest.TestCase):
         self.single.insert_at_beginning(5)
         print("List to operate: " + self.single.get_list())
         self.single.delete_at_end()
-        print("After deleting a node at the end: <Empty list>\n")
         self.assertEqual(self.single.get_list(), "")
+        print("After deleting a node at the end: <Empty list>\n")
 
         self.create_list()
         print("List to operate: " + self.single.get_list())
         self.single.delete_at_end()
-        print("After deleting a node at the end: " + self.single.get_list())
         self.assertEqual(
             self.single.get_list(),
             "5 \u27F6 10 \u27F6 2 \u27F6 27")
+        print("After deleting a node at the end: " + self.single.get_list())
 
         print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
 
@@ -175,22 +176,22 @@ class TestSingleLinkedList(unittest.TestCase):
         self.single.insert_at_beginning(5)
         print("List to operate: " + self.single.get_list())
         self.single.delete_at_position(1)
-        print("After deleting a node at position 1: <Empty list>\n")
         self.assertEqual(self.single.get_list(), "")
+        print("After deleting a node at position 1: <Empty list>\n")
 
         self.create_list()
         print("List to operate: " + self.single.get_list())
         self.single.delete_at_position(3)
-        print("After deleting a node at position 3: " + self.single.get_list())
         self.assertEqual(
             self.single.get_list(),
             "5 \u27F6 10 \u27F6 27 \u27F6 99")
+        print("After deleting a node at position 3: " + self.single.get_list())
 
         self.single.delete_at_position(4)
-        print("After deleting a node at position 4: " + self.single.get_list())
         self.assertEqual(
             self.single.get_list(),
             "5 \u27F6 10 \u27F6 27")
+        print("After deleting a node at position 4: " + self.single.get_list())
 
         try:
             self.single.delete_at_position(0)

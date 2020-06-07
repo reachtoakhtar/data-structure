@@ -35,28 +35,28 @@ class TestInsertIntoSortedList(unittest.TestCase):
         print("List: " + self.linked_list.get_list())
 
         insert_into_sorted_list(self.linked_list, -1)
-        print("List after inserting -1: ", self.linked_list.get_list())
         self.assertEqual(
             self.linked_list.get_list(),
             "-1 \u27F6 1 \u27F6 2 \u27F6 6 \u27F6 8 \u27F6 12")
+        print("List after inserting -1: ", self.linked_list.get_list())
 
         insert_into_sorted_list(self.linked_list, 5)
-        print("List after inserting 5: ", self.linked_list.get_list())
         self.assertEqual(
             self.linked_list.get_list(),
             "-1 \u27F6 1 \u27F6 2 \u27F6 5 \u27F6 6 \u27F6 8 \u27F6 12")
+        print("List after inserting 5: ", self.linked_list.get_list())
 
         insert_into_sorted_list(self.linked_list, 20)
-        print("List after inserting 20: ", self.linked_list.get_list())
         self.assertEqual(
             self.linked_list.get_list(),
             "-1 \u27F6 1 \u27F6 2 \u27F6 5 \u27F6 6 \u27F6 8 \u27F6 12 \u27F6 20")
+        print("List after inserting 20: ", self.linked_list.get_list())
 
         insert_into_sorted_list(self.linked_list, 8)
-        print("List after inserting 8: ", self.linked_list.get_list())
         self.assertEqual(
             self.linked_list.get_list(),
             "-1 \u27F6 1 \u27F6 2 \u27F6 5 \u27F6 6 \u27F6 8 \u27F6 8 \u27F6 12 \u27F6 20")
+        print("List after inserting 8: ", self.linked_list.get_list())
 
         print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
 
