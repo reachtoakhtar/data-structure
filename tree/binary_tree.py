@@ -115,6 +115,24 @@ class Tree:
         print(node.data, end=" ")
 
     @staticmethod
+    def levelorder(root):
+        if root is None:
+            return
+
+        queue = deque([])
+        queue.append(root)
+
+        while len(queue):
+            node = queue.popleft()
+            print(node.data, end=" ")
+
+            if node.left:
+                queue.append(node.left)
+
+            if node.right:
+                queue.append(node.right)
+
+    @staticmethod
     def preorder(node):
         Tree.preorder_recursive(node)
 
@@ -147,4 +165,3 @@ class Tree:
                 break
             else:
                 queue.append(node.right)
-

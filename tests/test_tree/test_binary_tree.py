@@ -52,6 +52,10 @@ class TestBinaryTree(unittest.TestCase):
         print("===========================================================")
         TestBinaryTree.print_sample_tree()
 
+        print("Levelorder traversal (BFS):", end=" ")
+        Tree.levelorder(self.root)
+        print("\n")
+
         print("Preorder traversal (iterative):", end=" ")
         Tree.preorder_iterative(self.root)
         print()
@@ -74,8 +78,9 @@ class TestBinaryTree(unittest.TestCase):
 
         print("Postorder traversal (recursive):", end=" ")
         Tree.postorder_recursive(self.root)
+        print()
 
-        print("\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
+        print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
 
 
 if __name__ == "__main__":
