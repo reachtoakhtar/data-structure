@@ -1,6 +1,6 @@
 import unittest
 
-from tree.binary_tree import TreeNode, inorder, insert
+from tree.binary_tree import TreeNode, Tree
 
 __author__ = "akhtar"
 
@@ -34,13 +34,13 @@ class TestBinaryTree(unittest.TestCase):
               " "*16 + "/     / \\ \n" + " "*15 + "7     15  8")
 
         print("Inorder traversal before insertion:", end=" ")
-        inorder(self.root)
+        Tree.inorder(self.root)
         print()
 
-        insert(self.root, 12)
+        Tree.insert(self.root, 12)
 
         print("Inorder traversal after insertion:", end=" ")
-        inorder(self.root)
+        Tree.inorder(self.root)
 
         print("\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
 

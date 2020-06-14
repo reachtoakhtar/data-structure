@@ -28,34 +28,36 @@ class TreeNode:
         return self.right
 
 
-def inorder(node):
-    """ Inorder traversal of a binary tree. """
-    if not node:
-        return
+class Tree:
+    @staticmethod
+    def inorder(node):
+        """ Inorder traversal of a binary tree. """
+        if not node:
+            return
 
-    inorder(node.left)
-    print(node.data, end=" ")
-    inorder(node.right)
+        Tree.inorder(node.left)
+        print(node.data, end=" ")
+        Tree.inorder(node.right)
 
+    @staticmethod
+    def insert(node, data):
+        """ Insert into a binary tree. """
+        queue = deque([])
+        queue.append(node)
+        new_node = TreeNode(data)
 
-def insert(node, data):
-    queue = deque([])
-    queue.append(node)
-    new_node = TreeNode(data)
+        # Do level order traversal until we find an empty place.
+        while len(queue):
+            node = queue.popleft()
 
-    # Do level order traversal until we find an empty place.
-    while len(queue):
-        node = queue[0]
-        queue.popleft()
+            if not node.left:
+                node.left = new_node
+                break
+            else:
+                queue.append(node.left)
 
-        if not node.left:
-            node.left = new_node
-            break
-        else:
-            queue.append(node.left)
-
-        if not node.right:
-            node.right = new_node
-            break
-        else:
-            queue.append(node.right)
+            if not node.right:
+                node.right = new_node
+                break
+            else:
+                queue.append(node.right)
