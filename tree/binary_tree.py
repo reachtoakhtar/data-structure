@@ -30,18 +30,104 @@ class TreeNode:
 
 class Tree:
     @staticmethod
-    def inorder(node):
-        """ Inorder traversal of a binary tree. """
-        if not node:
+    def preorder_iterative(root):
+        if root is None:
             return
 
-        Tree.inorder(node.left)
+        stack = []
+        stack.append(root)
+
+        while len(stack):
+            node = stack.pop()
+            print(node.data, end=" ")
+
+            if node.right is not None:
+                stack.append(node.right)
+            if node.left is not None:
+                stack.append(node.left)
+
+    @staticmethod
+    def preorder_recursive(node):
+        if node is None:
+            return
+
         print(node.data, end=" ")
-        Tree.inorder(node.right)
+        Tree.preorder_recursive(node.left)
+        Tree.preorder_recursive(node.right)
+
+    @staticmethod
+    def inorder_iterative(root):
+        if root is None:
+            return
+
+        current = root
+        stack = []
+
+        while True:
+            if current is not None:
+                stack.append(current)
+                current = current.left
+            elif len(stack):
+                current = stack.pop()
+                print(current.data, end=" ")
+                current = current.right
+            else:
+                break
+
+    @staticmethod
+    def inorder_recursive(node):
+        if node is None:
+            return
+
+        Tree.inorder_recursive(node.left)
+        print(node.data, end=" ")
+        Tree.inorder_recursive(node.right)
+
+    @staticmethod
+    def postorder_iterative(root):
+        if root is None:
+            return
+
+        stack1 = []
+        stack2 = []
+        stack1.append(root)
+
+        while len(stack1):
+            node = stack1.pop()
+            stack2.append(node)
+
+            if node.left:
+                stack1.append(node.left)
+            if node.right:
+                stack1.append(node.right)
+
+        while len(stack2):
+            node = stack2.pop()
+            print(node.data, end=" ")
+
+    @staticmethod
+    def postorder_recursive(node):
+        if node is None:
+            return
+
+        Tree.postorder_recursive(node.left)
+        Tree.postorder_recursive(node.right)
+        print(node.data, end=" ")
+
+    @staticmethod
+    def preorder(node):
+        Tree.preorder_recursive(node)
+
+    @staticmethod
+    def inorder(node):
+        Tree.preorder_recursive(node)
+
+    @staticmethod
+    def postorder(node):
+        Tree.preorder_recursive(node)
 
     @staticmethod
     def insert(node, data):
-        """ Insert into a binary tree. """
         queue = deque([])
         queue.append(node)
         new_node = TreeNode(data)
@@ -61,3 +147,4 @@ class Tree:
                 break
             else:
                 queue.append(node.right)
+
