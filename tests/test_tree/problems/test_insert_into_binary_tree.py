@@ -1,11 +1,12 @@
 import unittest
 
 from tree.binary_tree import TreeNode, Tree
+from tree.problems.insert_into_binary_tree import insert_into_binary_tree
 
 __author__ = "akhtar"
 
 
-class TestBinaryTree(unittest.TestCase):
+class TestInsertIntoBinaryTree(unittest.TestCase):
     """
     Initial tree:
              10
@@ -31,37 +32,19 @@ class TestBinaryTree(unittest.TestCase):
         self.root.right.left = TreeNode(15)
         self.root.right.right = TreeNode(8)
 
-    def test_tree_traversal(self):
-        print("TEST TREE TRAVERSAL")
+    def test_insert_into_tree(self):
+        print("TEST INSERT INTO BINARY TREE")
         print("===========================================================")
-        TestBinaryTree.print_sample_tree()
 
-        print("Levelorder traversal (BFS):", end=" ")
-        Tree.levelorder(self.root)
-        print("\n")
-
-        print("Preorder traversal (iterative):", end=" ")
-        Tree.preorder_iterative(self.root)
+        TestInsertIntoBinaryTree.print_sample_tree()
+        print("Inorder traversal before insertion  : ", end=" ")
+        Tree.inorder(self.root)
         print()
 
-        print("Preorder traversal (recursive):", end=" ")
-        Tree.preorder_recursive(self.root)
-        print("\n")
+        insert_into_binary_tree(self.root, 12)
 
-        print("Inorder traversal (iterative):", end=" ")
-        Tree.inorder_iterative(self.root)
-        print()
-
-        print("Inorder traversal (recursive):", end=" ")
-        Tree.inorder_recursive(self.root)
-        print("\n")
-
-        print("Postorder traversal (iterative):", end=" ")
-        Tree.postorder_iterative(self.root)
-        print()
-
-        print("Postorder traversal (recursive):", end=" ")
-        Tree.postorder_recursive(self.root)
+        print("Inorder traversal after inserting 12: ", end=" ")
+        Tree.inorder(self.root)
 
         print("\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
 
