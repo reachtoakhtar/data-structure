@@ -36,13 +36,13 @@ class TestBinaryTree(unittest.TestCase):
         print("===========================================================")
 
         TestBinaryTree.print_sample_tree()
-        print("Inorder traversal before insertion:", end=" ")
+        print("Inorder traversal before insertion  : ", end=" ")
         Tree.inorder(self.root)
         print()
 
         Tree.insert(self.root, 12)
 
-        print("Inorder traversal after inserting 12:", end=" ")
+        print("Inorder traversal after inserting 12: ", end=" ")
         Tree.inorder(self.root)
 
         print("\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")

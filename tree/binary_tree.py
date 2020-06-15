@@ -138,11 +138,11 @@ class Tree:
 
     @staticmethod
     def inorder(node):
-        Tree.preorder_recursive(node)
+        Tree.inorder_recursive(node)
 
     @staticmethod
     def postorder(node):
-        Tree.preorder_recursive(node)
+        Tree.postorder_recursive(node)
 
     @staticmethod
     def insert(node, data):
@@ -154,13 +154,13 @@ class Tree:
         while len(queue):
             node = queue.popleft()
 
-            if node.left is not None:
+            if node.left is None:
                 node.left = new_node
                 break
             else:
                 queue.append(node.left)
 
-            if node.right is not None:
+            if node.right is None:
                 node.right = new_node
                 break
             else:
