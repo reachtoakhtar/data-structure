@@ -126,10 +126,10 @@ class Tree:
             node = queue.popleft()
             print(node.data, end=" ")
 
-            if node.left:
+            if node.left is not None:
                 queue.append(node.left)
 
-            if node.right:
+            if node.right is not None:
                 queue.append(node.right)
 
     @staticmethod
@@ -154,13 +154,13 @@ class Tree:
         while len(queue):
             node = queue.popleft()
 
-            if not node.left:
+            if node.left is not None:
                 node.left = new_node
                 break
             else:
                 queue.append(node.left)
 
-            if not node.right:
+            if node.right is not None:
                 node.right = new_node
                 break
             else:
