@@ -3,7 +3,7 @@ from collections import deque
 __author__ = "akhtar"
 
 
-def find_maximum_element_recursive(root):
+def find_maximum_element_recursive(node):
     """
     Find the maximum element in a binary tree with given root.
 
@@ -11,14 +11,14 @@ def find_maximum_element_recursive(root):
     :return: the maximum element.
     :rtype: int
     """
-    if root is None:
+    if node is None:
         return float('-inf')
 
     # Return maximum of 3 values:
-    # 1. Root's data 2. Max in Left Subtree  3. Max in right subtree
-    res = root.data
-    lres = find_maximum_element_recursive(root.left)
-    rres = find_maximum_element_recursive(root.right)
+    # 1. Node's data 2. Max in Left Subtree  3. Max in right subtree
+    res = node.data
+    lres = find_maximum_element_recursive(node.left)
+    rres = find_maximum_element_recursive(node.right)
 
     return max(res, lres, rres)
 
