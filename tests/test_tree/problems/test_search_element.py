@@ -6,7 +6,7 @@ from tree.problems.search_element import find_element_recursive
 __author__ = "akhtar"
 
 
-class TestFindMaximumInABinaryTree(unittest.TestCase):
+class TestFindElementInABinaryTree(unittest.TestCase):
     """
     Initial tree:
              10
@@ -33,10 +33,10 @@ class TestFindMaximumInABinaryTree(unittest.TestCase):
         self.root.right.right = TreeNode(8)
 
     def test_find_element_recursive(self):
-        print("TEST MAXIMUM ELEMENT - RECURSIVE")
+        print("TEST SEARCH ELEMENT - RECURSIVE")
         print("===========================================================")
 
-        TestFindMaximumInABinaryTree.print_sample_tree()
+        TestFindElementInABinaryTree.print_sample_tree()
         print("Element to find: 15.", end=" ")
         found = find_element_recursive(self.root, 15)
         self.assertEqual(True, found)
