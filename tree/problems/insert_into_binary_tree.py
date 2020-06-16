@@ -5,9 +5,17 @@ from tree.binary_tree import TreeNode
 __author__ = "akhtar"
 
 
-def insert_into_binary_tree(node, data):
+def insert_into_binary_tree(root, data):
+    """
+    Insert an element into a binary tree with given root.
+
+    :param TreeNode node: The root of the tree.
+    :param int data: The data to insert.
+    :return: nothing.
+    :rtype: None
+    """
     queue = deque([])
-    queue.append(node)
+    queue.append(root)
     new_node = TreeNode(data)
 
     # Do level order traversal until we find an empty place.
