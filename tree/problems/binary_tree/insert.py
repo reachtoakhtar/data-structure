@@ -9,7 +9,7 @@ def insert_into_binary_tree(root, data):
     """
     Insert an element into a binary tree with given root.
 
-    :param TreeNode node: The root of the tree.
+    :param TreeNode root: The root of the tree.
     :param int data: The data to insert.
     :return: nothing.
     :rtype: None

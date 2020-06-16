@@ -7,7 +7,7 @@ def find_maximum_element_recursive(node):
     """
     Find the maximum element in a binary tree with given root.
 
-    :param TreeNode root: The root of the tree.
+    :param TreeNode node: The root of the tree.
     :return: the maximum element.
     :rtype: int
     """
