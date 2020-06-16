@@ -1,7 +1,7 @@
 import unittest
 
 from tree.binary_tree import TreeNode, Tree
-from tree.problems.insert_into_binary_tree import insert_into_binary_tree
+from tree.problems.binary_tree.insert import insert_into_binary_tree
 
 __author__ = "akhtar"
 
