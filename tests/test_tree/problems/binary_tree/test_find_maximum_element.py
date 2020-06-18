@@ -1,10 +1,10 @@
+__author__ = "akhtar"
+
 import unittest
 
 from tree.binary_tree import TreeNode
 from tree.problems.binary_tree.find_maximum_element import find_maximum_element_iterative, \
     find_maximum_element_recursive
-
-__author__ = "akhtar"
 
 
 class TestFindMaximumInABinaryTree(unittest.TestCase):

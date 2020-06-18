@@ -1,10 +1,10 @@
+__author__ = "akhtar"
+
 import unittest
 
 from tree.binary_tree import TreeNode
 from tree.problems.binary_tree.search_element import find_element_iterative, \
     find_element_recursive
-
-__author__ = "akhtar"
 
 
 class TestFindElementInABinaryTree(unittest.TestCase):

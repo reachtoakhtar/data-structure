@@ -3,6 +3,7 @@ __author__ = "akhtar"
 import unittest
 
 from tree.binary_tree import TreeNode
+from tree.problems.binary_tree.find_height import find_height_recursive
 from tree.problems.binary_tree.find_size import find_size_iterative, \
     find_size_recursive
 
@@ -33,41 +34,41 @@ class TestFindSize(unittest.TestCase):
         self.root.right.left = TreeNode(15)
         self.root.right.right = TreeNode(8)
 
-    def test_find_size_recursive(self):
-        print("TEST FIND SIZE OF A BINARY TREE - RECURSIVE")
+    def test_find_height_recursive(self):
+        print("TEST FIND HEIGHT OF A BINARY TREE - RECURSIVE")
         print("===========================================================")
 
         TestFindSize.print_sample_tree()
-        size = find_size_recursive(self.root)
-        self.assertEqual(6, size)
-        print("Size of given tree = {0}".format(size), end="\n\n")
+        height = find_height_recursive(self.root)
+        self.assertEqual(3, height)
+        print("Height of given tree = {0}".format(height), end="\n\n")
 
         self.root = TreeNode(10)
         print("Tree to operate: ")
         print(" "*20 + "10\n")
-        size = find_size_recursive(self.root)
-        self.assertEqual(1, size)
-        print("Size of given tree = {0}".format(size), end=" ")
+        height = find_height_recursive(self.root)
+        self.assertEqual(1, height)
+        print("Height of given tree = {0}".format(height), end=" ")
 
         print("\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
 
-    def test_find_size_iterative(self):
-        print("TEST FIND SIZE OF A BINARY TREE - RECURSIVE")
-        print("===========================================================")
-
-        TestFindSize.print_sample_tree()
-        size = find_size_iterative(self.root)
-        self.assertEqual(6, size)
-        print("Size of given tree = {0}".format(size), end="\n\n")
-
-        self.root = TreeNode(10)
-        print("Tree to operate: ")
-        print(" "*20 + "10\n")
-        size = find_size_iterative(self.root)
-        self.assertEqual(1, size)
-        print("Size of given tree = {0}".format(size), end=" ")
-
-        print("\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
+    # def test_find_height_iterative(self):
+    #     print("TEST FIND HEIGHT OF A BINARY TREE - RECURSIVE")
+    #     print("===========================================================")
+    #
+    #     TestFindSize.print_sample_tree()
+    #     size = find_size_iterative(self.root)
+    #     self.assertEqual(6, size)
+    #     print("Size of given tree = {0}".format(size), end="\n\n")
+    #
+    #     self.root = TreeNode(10)
+    #     print("Tree to operate: ")
+    #     print(" "*20 + "10\n")
+    #     size = find_size_iterative(self.root)
+    #     self.assertEqual(1, size)
+    #     print("Size of given tree = {0}".format(size), end=" ")
+    #
+    #     print("\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
 
 
 if __name__ == "__main__":

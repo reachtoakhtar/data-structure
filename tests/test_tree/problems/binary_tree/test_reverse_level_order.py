@@ -1,9 +1,9 @@
+__author__ = "akhtar"
+
 import unittest
 
 from tree.binary_tree import TreeNode
 from tree.problems.binary_tree.reverse_level_order import reverse_level_order
-
-__author__ = "akhtar"
 
 
 class TestReverseLevelOrder(unittest.TestCase):
