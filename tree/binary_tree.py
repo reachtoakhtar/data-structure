@@ -8,7 +8,10 @@ class TreeNode:
         self.data = data
         self.left = None
         self.right = None
-
+    
+    def __str__(self):
+        return "Node: " + str(self.data)
+    
     def set_data(self, data):
         self.data = data
 

@@ -20,4 +20,4 @@ def find_deepest_node(root):
         if node.right is not None:
             q.append(node.right)
     
-    return node.data
+    return node
