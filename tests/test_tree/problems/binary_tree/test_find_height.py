@@ -3,9 +3,8 @@ __author__ = "akhtar"
 import unittest
 
 from tree.binary_tree import TreeNode
-from tree.problems.binary_tree.find_height import find_height_recursive
-from tree.problems.binary_tree.find_size import find_size_iterative, \
-    find_size_recursive
+from tree.problems.binary_tree.find_height import find_height_iterative, \
+    find_height_recursive
 
 
 class TestFindSize(unittest.TestCase):
@@ -52,23 +51,23 @@ class TestFindSize(unittest.TestCase):
 
         print("\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
 
-    # def test_find_height_iterative(self):
-    #     print("TEST FIND HEIGHT OF A BINARY TREE - RECURSIVE")
-    #     print("===========================================================")
-    #
-    #     TestFindSize.print_sample_tree()
-    #     size = find_size_iterative(self.root)
-    #     self.assertEqual(6, size)
-    #     print("Size of given tree = {0}".format(size), end="\n\n")
-    #
-    #     self.root = TreeNode(10)
-    #     print("Tree to operate: ")
-    #     print(" "*20 + "10\n")
-    #     size = find_size_iterative(self.root)
-    #     self.assertEqual(1, size)
-    #     print("Size of given tree = {0}".format(size), end=" ")
-    #
-    #     print("\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
+    def test_find_height_iterative(self):
+        print("TEST FIND HEIGHT OF A BINARY TREE - ITERATIVE")
+        print("===========================================================")
+
+        TestFindSize.print_sample_tree()
+        size = find_height_iterative(self.root)
+        self.assertEqual(3, size)
+        print("Height of given tree = {0}".format(size), end="\n\n")
+
+        self.root = TreeNode(10)
+        print("Tree to operate: ")
+        print(" "*20 + "10\n")
+        size = find_height_iterative(self.root)
+        self.assertEqual(1, size)
+        print("Height of given tree = {0}".format(size), end=" ")
+
+        print("\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
 
 
 if __name__ == "__main__":
