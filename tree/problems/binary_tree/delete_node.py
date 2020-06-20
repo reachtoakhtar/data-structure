@@ -31,6 +31,13 @@ def _delete_deepest(root, d_node):
 
 def delete_node(root, data):
     """
+    Delete a node from a binary tree with given root.
+
+    :param TreeNode root: The root of the tree.
+    :param int data: The node data to delete.
+    :return: nothing.
+    :rtype: None
+    
     Steps:
     1. Starting at root, find the deepest and rightmost node in binary tree and
      the node which we want to delete.
