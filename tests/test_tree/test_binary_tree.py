@@ -24,14 +24,8 @@ class TestBinaryTree(unittest.TestCase):
         self.create_tree()
 
     def create_tree(self):
-        self.root = TreeNode(10)
-        self.root.left = TreeNode(11)
-        self.root.left.left = TreeNode(7)
-        self.root.right = TreeNode(9)
-        self.root.right.left = TreeNode(15)
-        self.root.right.right = TreeNode(8)
-
-    def test_tree_traversal(self):
+        self.root = SampleTree.create()
+def test_tree_traversal(self):
         print("TEST TREE TRAVERSAL")
         print("===========================================================")
         TestBinaryTree.print_sample_tree()
