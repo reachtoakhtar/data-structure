@@ -106,30 +106,35 @@ class SampleTree:
         return root
     
     @staticmethod
-    def print_1():
-        print("Tree to operate: ")
+    def print_1(message=True):
+        if message:
+            print("Tree to operate: ")
         print(" "*20 + "57 \n")
     
     @staticmethod
-    def print_3():
-        print("Tree to operate: ")
+    def print_3(message=True):
+        if message:
+            print("Tree to operate: ")
         print(" "*20 + "67 \n" + " "*18 + " /  \\ \n" + " "*17 + "4    23 \n")
     
     @staticmethod
-    def print_4():
-        print("Tree to operate: ")
+    def print_4(message=True):
+        if message:
+            print("Tree to operate: ")
         print(" "*20 + "5 \n" + " "*18 + " /  \\ \n" + " "*17 + " 41   86 \n"
               + " "*23 + "/ \n" + " "*22 + "29  \n")
     
     @staticmethod
-    def print_6():
-        print("Tree to operate: ")
+    def print_6(message=True):
+        if message:
+            print("Tree to operate: ")
         print(" "*20 + "10 \n" + " "*18 + " /  \\ \n" + " "*17 + "11    9 \n"
               + " "*16 + "/     / \\ \n" + " "*15 + "7     15  8\n")
     
     @staticmethod
-    def print_9():
-        print("Tree to operate: ")
+    def print_9(message=True):
+        if message:
+            print("Tree to operate: ")
         print(" "*20 + "10 \n" + " "*18 + " /  \\ \n" + " "*17 + "11    9 \n"
               + " "*16 + "/     / \\ \n" + " "*15 + "7     15  8\n" + " "*16
               + "\\" + " "*7 + "/ \n" + " "*16 + "33" + " "*5 + "62 \n"
