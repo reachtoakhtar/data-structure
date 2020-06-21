@@ -13,13 +13,13 @@ class TestFindMaximumInABinaryTree(unittest.TestCase):
         self.create_tree()
     
     def create_tree(self):
-        self.root = SampleTree.create()
+        self.root = SampleTree.create_9()
     
     def test_find_maximum_element_recursive(self):
         print("TEST MAXIMUM ELEMENT - RECURSIVE")
         print("===========================================================")
         
-        SampleTree.print()
+        SampleTree.print_9()
         maximum = find_maximum_element_recursive(self.root)
         self.assertEqual(62, maximum)
         print("Maximum element: " + str(maximum), end=" ")
@@ -31,7 +31,7 @@ class TestFindMaximumInABinaryTree(unittest.TestCase):
         print("TEST MAXIMUM ELEMENT - ITERATIVE")
         print("===========================================================")
         
-        SampleTree.print()
+        SampleTree.print_9()
         maximum = find_maximum_element_iterative(self.root)
         self.assertEqual(62, maximum)
         print("Maximum element: " + str(maximum), end=" ")

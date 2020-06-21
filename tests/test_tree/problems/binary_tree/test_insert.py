@@ -12,13 +12,13 @@ class TestInsertIntoBinaryTree(unittest.TestCase):
         self.create_tree()
     
     def create_tree(self):
-        self.root = SampleTree.create()
+        self.root = SampleTree.create_9()
     
     def test_insert_into_tree(self):
         print("TEST INSERT INTO BINARY TREE")
         print("===========================================================")
         
-        SampleTree.print()
+        SampleTree.print_9()
         print("Inorder traversal before insertion  : ", end=" ")
         Tree.inorder(self.root)
         print()

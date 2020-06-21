@@ -11,13 +11,13 @@ class TestFindLeafNodes(unittest.TestCase):
         self.create_tree()
     
     def create_tree(self):
-        self.root = SampleTree.create()
+        self.root = SampleTree.create_9()
     
     def test_find_leaf_nodes(self):
-        print("TEST FIND DEEPEST NODE OF A BINARY TREE")
+        print("TEST FIND LEAF NODES IN A BINARY TREE")
         print("===========================================================")
         
-        SampleTree.print()
+        SampleTree.print_9()
         leaf_count = find_leaf_nodes(self.root)
         print("Count of leaf nodes = {0}".format(leaf_count), end=" ")
         

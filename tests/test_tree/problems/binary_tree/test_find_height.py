@@ -13,13 +13,13 @@ class TestFindHeight(unittest.TestCase):
         self.create_tree()
     
     def create_tree(self):
-        self.root = SampleTree.create()
+        self.root = SampleTree.create_9()
     
     def test_find_height_recursive(self):
         print("TEST FIND HEIGHT OF A BINARY TREE - RECURSIVE")
         print("===========================================================")
         
-        SampleTree.print()
+        SampleTree.print_9()
         height = find_height_recursive(self.root)
         self.assertEqual(5, height)
         print("Height of given tree = {0}".format(height), end="\n\n")
@@ -38,7 +38,7 @@ class TestFindHeight(unittest.TestCase):
         print("TEST FIND HEIGHT OF A BINARY TREE - ITERATIVE")
         print("===========================================================")
         
-        SampleTree.print()
+        SampleTree.print_9()
         size = find_height_iterative(self.root)
         self.assertEqual(5, size)
         print("Height of given tree = {0}".format(size), end="\n\n")

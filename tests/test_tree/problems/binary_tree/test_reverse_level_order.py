@@ -11,13 +11,13 @@ class TestReverseLevelOrder(unittest.TestCase):
         self.create_tree()
     
     def create_tree(self):
-        self.root = SampleTree.create()
+        self.root = SampleTree.create_9()
     
     def test_insert_into_tree(self):
         print("TEST REVERSE LEVEL ORDER")
         print("===========================================================")
         
-        SampleTree.print()
+        SampleTree.print_9()
         
         print("Reverse level order traversal: ", end=" ")
         reverse_level_order(self.root)
