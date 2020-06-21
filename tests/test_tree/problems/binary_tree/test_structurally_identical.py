@@ -19,10 +19,8 @@ class TestStructurallyIdentical(unittest.TestCase):
         root2 = SampleTree.create_3()
         print("First Tree:")
         SampleTree.print_1(message=False)
-        
         print("Second Tree:")
         SampleTree.print_3(message=False)
-        
         identical = structurally_identical(root1, root2)
         self.assertEqual(False, identical)
         print("Structurally Identical: {0}".format(identical))
@@ -32,10 +30,8 @@ class TestStructurallyIdentical(unittest.TestCase):
         root2 = SampleTree.create_4()
         print("First Tree:")
         SampleTree.print_4(message=False)
-        
         print("Second Tree:")
         SampleTree.print_4(message=False)
-        
         identical = structurally_identical(root1, root2)
         self.assertEqual(True, identical)
         print("Structurally Identical: {0}".format(identical))
@@ -45,10 +41,19 @@ class TestStructurallyIdentical(unittest.TestCase):
         root2 = SampleTree.create_9()
         print("First Tree:")
         SampleTree.print_4(message=False)
-        
         print("Second Tree:")
         SampleTree.print_9(message=False)
+        identical = structurally_identical(root1, root2)
+        self.assertEqual(False, identical)
+        print("Structurally Identical: {0}".format(identical))
+        print("\n---------------------------------\n")
         
+        root1 = SampleTree.create_6()
+        root2 = SampleTree.create_4()
+        print("First Tree:")
+        SampleTree.print_6(message=False)
+        print("Second Tree:")
+        SampleTree.print_4(message=False)
         identical = structurally_identical(root1, root2)
         self.assertEqual(False, identical)
         print("Structurally Identical: {0}".format(identical), end="")
