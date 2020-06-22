@@ -73,7 +73,6 @@ class TestDeletetNode(unittest.TestCase):
         delete_node(root, node_to_delete)
         print("Inorder traversal after delete:", end=" ")
         Tree.inorder(root)
-        print("\n\n")
         
         print(
             "\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
