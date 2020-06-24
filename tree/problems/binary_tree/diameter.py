@@ -27,7 +27,7 @@ def find_diameter(root):
         return 0
 
     # This will store the final answer
-    ans = [-1]
+    ans = [-99999999999]
     
     height(root, ans)
     return ans[0]
