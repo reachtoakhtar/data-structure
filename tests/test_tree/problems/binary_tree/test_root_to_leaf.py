@@ -3,7 +3,6 @@ __author__ = "akhtar"
 import unittest
 
 from tests.test_tree.utils import SampleTree
-from tree.problems.binary_tree.diameter import find_diameter
 from tree.problems.binary_tree.root_to_leaf import all_paths_from_root_to_leaf
 
 
