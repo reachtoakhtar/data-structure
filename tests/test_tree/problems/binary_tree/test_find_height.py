@@ -3,7 +3,7 @@ __author__ = "akhtar"
 import unittest
 
 from tests.test_tree.utils import SampleBTree
-from tree.binary_tree import BTreeNode
+from tree.nodes import BTreeNode
 from tree.problems.binary_tree.find_height import find_height_iterative, \
     find_height_recursive
 

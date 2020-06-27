@@ -1,6 +1,6 @@
 __author__ = "akhtar"
 
-from tree.binary_tree import BTreeNode
+from tree.nodes import BTreeNode
 
 
 class SampleBTree:

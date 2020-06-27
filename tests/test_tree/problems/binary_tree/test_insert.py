@@ -3,8 +3,8 @@ __author__ = "akhtar"
 import unittest
 
 from tests.test_tree.utils import SampleBTree
-from tree.binary_tree import Tree
 from tree.problems.binary_tree.insert import insert_into_binary_tree
+from tree.problems.binary_tree.traversal_inorder import inorder
 
 
 class TestInsertIntoBinaryTree(unittest.TestCase):
@@ -20,13 +20,13 @@ class TestInsertIntoBinaryTree(unittest.TestCase):
         
         SampleBTree.print_9()
         print("Inorder traversal before insertion  : ", end=" ")
-        Tree.inorder(self.root)
+        inorder(self.root)
         print()
         
         insert_into_binary_tree(self.root, 12)
         
         print("Inorder traversal after inserting 12: ", end=" ")
-        Tree.inorder(self.root)
+        inorder(self.root)
         
         print(
             "\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")

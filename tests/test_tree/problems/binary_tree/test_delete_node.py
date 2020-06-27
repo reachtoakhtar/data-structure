@@ -3,8 +3,8 @@ __author__ = "akhtar"
 import unittest
 
 from tests.test_tree.utils import SampleBTree
-from tree.binary_tree import Tree
 from tree.problems.binary_tree.delete_node import delete_node
+from tree.problems.binary_tree.traversal_inorder import inorder
 
 
 class TestDeletetNode(unittest.TestCase):
@@ -20,11 +20,11 @@ class TestDeletetNode(unittest.TestCase):
         node_to_delete = 15
         print("Node to delete: {0}".format(node_to_delete))
         print("Inorder traversal before delete:", end=" ")
-        Tree.inorder(root)
+        inorder(root)
         print()
         delete_node(root, node_to_delete)
         print("Inorder traversal after delete:", end=" ")
-        Tree.inorder(root)
+        inorder(root)
         print("\n\n")
         
         root = SampleBTree.create_3()
@@ -32,11 +32,11 @@ class TestDeletetNode(unittest.TestCase):
         node_to_delete = 67
         print("Node to delete: {0}".format(node_to_delete))
         print("Inorder traversal before delete:", end=" ")
-        Tree.inorder(root)
+        inorder(root)
         print()
         delete_node(root, node_to_delete)
         print("Inorder traversal after delete:", end=" ")
-        Tree.inorder(root)
+        inorder(root)
         print("\n\n")
         
         root = SampleBTree.create_4()
@@ -44,11 +44,11 @@ class TestDeletetNode(unittest.TestCase):
         node_to_delete = 86
         print("Node to delete: {0}".format(node_to_delete))
         print("Inorder traversal before delete:", end=" ")
-        Tree.inorder(root)
+        inorder(root)
         print()
         delete_node(root, node_to_delete)
         print("Inorder traversal after delete:", end=" ")
-        Tree.inorder(root)
+        inorder(root)
         print("\n\n")
         
         root = SampleBTree.create_6()
@@ -56,11 +56,11 @@ class TestDeletetNode(unittest.TestCase):
         node_to_delete = 9
         print("Node to delete: {0}".format(node_to_delete))
         print("Inorder traversal before delete:", end=" ")
-        Tree.inorder(root)
+        inorder(root)
         print()
         delete_node(root, node_to_delete)
         print("Inorder traversal after delete:", end=" ")
-        Tree.inorder(root)
+        inorder(root)
         print("\n\n")
         
         root = SampleBTree.create_9()
@@ -68,11 +68,11 @@ class TestDeletetNode(unittest.TestCase):
         node_to_delete = 8
         print("Node to delete: {0}".format(node_to_delete))
         print("Inorder traversal before delete:", end=" ")
-        Tree.inorder(root)
+        inorder(root)
         print()
         delete_node(root, node_to_delete)
         print("Inorder traversal after delete:", end=" ")
-        Tree.inorder(root)
+        inorder(root)
         
         print(
             "\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")

@@ -1,6 +1,6 @@
 from collections import deque
 
-from tree.binary_tree import BTreeNode
+from tree.nodes import BTreeNode
 
 __author__ = "akhtar"
 
