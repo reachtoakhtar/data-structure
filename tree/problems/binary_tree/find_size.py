@@ -7,7 +7,7 @@ def find_size_recursive(node):
     """
     Find the size of a binary tree.
 
-    :param TreeNode node: The root of the tree.
+    :param BTreeNode node: The root of the tree.
     :return: the tree size.
     :rtype: int
     """
@@ -22,7 +22,7 @@ def find_size_iterative(root):
     """
     Find the size of a binary tree.
 
-    :param TreeNode root: The root of the tree.
+    :param BTreeNode root: The root of the tree.
     :return: the tree size.
     :rtype: int
     """

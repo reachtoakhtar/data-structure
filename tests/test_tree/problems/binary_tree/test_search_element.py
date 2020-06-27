@@ -2,7 +2,7 @@ __author__ = "akhtar"
 
 import unittest
 
-from tests.test_tree.utils import SampleTree
+from tests.test_tree.utils import SampleBTree
 from tree.problems.binary_tree.search_element import find_element_iterative, \
     find_element_recursive
 
@@ -12,13 +12,13 @@ class TestFindElementInABinaryTree(unittest.TestCase):
         self.create_tree()
     
     def create_tree(self):
-        self.root = SampleTree.create_9()
+        self.root = SampleBTree.create_9()
     
     def test_find_element_recursive(self):
         print("TEST SEARCH ELEMENT - RECURSIVE")
         print("===========================================================")
         
-        SampleTree.print_9()
+        SampleBTree.print_9()
         print("Element to search: 15.", end=" ")
         found = find_element_recursive(self.root, 15)
         self.assertEqual(True, found)
@@ -51,7 +51,7 @@ class TestFindElementInABinaryTree(unittest.TestCase):
         print("TEST SEARCH ELEMENT - ITERATIVE")
         print("===========================================================")
         
-        SampleTree.print_9()
+        SampleBTree.print_9()
         print("Element to search: 15.", end=" ")
         found = find_element_iterative(self.root, 15)
         self.assertEqual(True, found)

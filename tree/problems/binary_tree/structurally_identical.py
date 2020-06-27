@@ -5,8 +5,8 @@ def structurally_identical(root1, root2):
     """
     Given two binary trees, find if they are structurally identical.
 
-    :param TreeNode root1: The root of the first tree.
-    :param TreeNode root2: The root of the second tree.
+    :param BTreeNode root1: The root of the first tree.
+    :param BTreeNode root2: The root of the second tree.
     :return: whether trees are structurally identical.
     :rtype: bool
     """

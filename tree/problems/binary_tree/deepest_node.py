@@ -7,9 +7,9 @@ def find_deepest_node(root):
     """
     Find the deepest node in a binary tree.
 
-    :param TreeNode root: The root of the tree.
+    :param BTreeNode root: The root of the tree.
     :return: the deepest node.
-    :rtype: TreeNode
+    :rtype: BTreeNode
     """
     if root is None:
         return

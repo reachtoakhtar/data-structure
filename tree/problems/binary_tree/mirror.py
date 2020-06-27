@@ -5,7 +5,7 @@ def mirror(node):
     """
     Find the mirror of a given binary tree.
 
-    :param TreeNode node: A node of the tree.
+    :param BTreeNode node: A node of the tree.
     :return: nothing.
     :rtype: None
     """

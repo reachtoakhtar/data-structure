@@ -1,7 +1,7 @@
 import unittest
 
-from tests.test_tree.utils import SampleTree
-from tree.binary_tree import TreeNode, Tree
+from tests.test_tree.utils import SampleBTree
+from tree.binary_tree import Tree
 
 __author__ = "akhtar"
 
@@ -11,12 +11,12 @@ class TestBinaryTree(unittest.TestCase):
         self.create_tree()
 
     def create_tree(self):
-        self.root = SampleTree.create_9()
+        self.root = SampleBTree.create_9()
     
     def test_tree_traversal(self):
         print("TEST TREE TRAVERSAL")
         print("===========================================================")
-        SampleTree.print_9()
+        SampleBTree.print_9()
 
         print("Levelorder traversal (BFS):", end=" ")
         Tree.levelorder(self.root)

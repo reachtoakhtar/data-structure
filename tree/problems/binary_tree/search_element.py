@@ -7,7 +7,7 @@ def find_element_recursive(node, element):
     """
     Find the given element in a binary tree.
 
-    :param TreeNode node: The root of the tree.
+    :param BTreeNode node: The root of the tree.
     :param int element: The element to be searched.
     :return: true if the element is found else false.
     :rtype: bool
@@ -29,7 +29,7 @@ def find_element_iterative(root, element):
     """
     Find the given element in a binary tree.
 
-    :param TreeNode root: The root of the tree.
+    :param BTreeNode root: The root of the tree.
     :param int element: The element to be searched.
     :return: true if the element is found else false.
     :rtype: bool

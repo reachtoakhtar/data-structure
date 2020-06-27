@@ -2,7 +2,7 @@ __author__ = "akhtar"
 
 import unittest
 
-from tests.test_tree.utils import SampleTree
+from tests.test_tree.utils import SampleBTree
 from tree.problems.binary_tree.path_with_sum import has_path_with_sum
 
 
@@ -14,56 +14,56 @@ class TestPathWithSum(unittest.TestCase):
         print("TEST PATH WITH SUM EXISTS IN A BINARY TREE")
         print("===========================================================")
         
-        root = SampleTree.create_1()
-        SampleTree.print_1()
+        root = SampleBTree.create_1()
+        SampleBTree.print_1()
         sum = 14
         path_exists = has_path_with_sum(root, sum)
         self.assertEqual(False, path_exists)
         print("Path with sum {0} exists: {1}".format(sum, path_exists))
         print("\n\n")
         
-        root = SampleTree.create_3()
-        SampleTree.print_3()
+        root = SampleBTree.create_3()
+        SampleBTree.print_3()
         sum = 90
         path_exists = has_path_with_sum(root, sum)
         self.assertEqual(True, path_exists)
         print("Path with sum {0} exists: {1}".format(sum, path_exists))
         print("\n\n")
         
-        root = SampleTree.create_4()
-        SampleTree.print_4()
+        root = SampleBTree.create_4()
+        SampleBTree.print_4()
         sum = 45
         path_exists = has_path_with_sum(root, sum)
         self.assertEqual(False, path_exists)
         print("Path with sum {0} exists: {1}".format(sum, path_exists))
         print("\n\n")
         
-        root = SampleTree.create_6()
-        SampleTree.print_6()
+        root = SampleBTree.create_6()
+        SampleBTree.print_6()
         sum = 34
         path_exists = has_path_with_sum(root, sum)
         self.assertEqual(True, path_exists)
         print("Path with sum {0} exists: {1}".format(sum, path_exists))
         print("\n\n")
         
-        root = SampleTree.create_9()
-        SampleTree.print_9()
+        root = SampleBTree.create_9()
+        SampleBTree.print_9()
         sum = 78
         path_exists = has_path_with_sum(root, sum)
         self.assertEqual(False, path_exists)
         print("Path with sum {0} exists: {1}".format(sum, path_exists))
         print("\n\n")
         
-        root = SampleTree.create_left_weighted()
-        SampleTree.print_left_weighted()
+        root = SampleBTree.create_left_weighted()
+        SampleBTree.print_left_weighted()
         sum = 10
         path_exists = has_path_with_sum(root, sum)
         self.assertEqual(False, path_exists)
         print("Path with sum {0} exists: {1}".format(sum, path_exists))
         print("\n\n")
         
-        root = SampleTree.create_right_weighted()
-        SampleTree.print_right_weighted()
+        root = SampleBTree.create_right_weighted()
+        SampleBTree.print_right_weighted()
         sum = 21
         path_exists = has_path_with_sum(root, sum)
         self.assertEqual(True, path_exists)

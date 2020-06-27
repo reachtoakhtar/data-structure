@@ -5,7 +5,7 @@ def level_with_maximum_sum(root):
     """
     Find the level with maximum sum in a binary tree.
 
-    :param TreeNode root: The root of the tree.
+    :param BTreeNode root: The root of the tree.
     :return: the level with maximum sum and the sum.
     :rtype: tuple
     """
@@ -71,7 +71,7 @@ def level_with_maximum_sum(root):
 #     """
 #     Find the level with maximum sum in a binary tree.
 #
-#     :param TreeNode root: The root of the tree.
+#     :param BTreeNode root: The root of the tree.
 #     :return: the level with maximum sum.
 #     :rtype: int
 #     """

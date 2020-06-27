@@ -7,7 +7,7 @@ def find_height_recursive(node):
     """
     Find the height of a binary tree.
 
-    :param TreeNode node: The root of the tree.
+    :param BTreeNode node: The root of the tree.
     :return: height of the tree.
     :rtype: int
     """
@@ -24,7 +24,7 @@ def find_height_iterative(root):
     """
     Find the height of a binary tree.
 
-    :param TreeNode root: The root of the tree.
+    :param BTreeNode root: The root of the tree.
     :return: height of the tree.
     :rtype: int
     """

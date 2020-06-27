@@ -5,7 +5,7 @@ def has_path_with_sum(node, sum):
     """
     Check the existence of path with given sum in a binary tree.
 
-    :param TreeNode node: A node of the tree.
+    :param BTreeNode node: A node of the tree.
     :return: whether path with given sum exists or not.
     :rtype: bool
     """

@@ -1,6 +1,6 @@
 from collections import deque
 
-from tree.binary_tree import TreeNode
+from tree.binary_tree import BTreeNode
 
 __author__ = "akhtar"
 
@@ -9,7 +9,7 @@ def reverse_level_order(node):
     """
     Print the reverse level order data for a given binary tree.
 
-    :param TreeNode node: The node of the tree.
+    :param BTreeNode node: The node of the tree.
     :return: reverse level order data.
     :rtype: list
     """

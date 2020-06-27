@@ -1,16 +1,16 @@
 __author__ = "akhtar"
 
-from tree.binary_tree import TreeNode
+from tree.binary_tree import BTreeNode
 
 
-class SampleTree:
+class SampleBTree:
     @staticmethod
     def create_1():
         """
                  57
         """
         # Root
-        root = TreeNode(57)
+        root = BTreeNode(57)
         return root
 
     @staticmethod
@@ -21,13 +21,13 @@ class SampleTree:
                4   23
         """
         # Root
-        root = TreeNode(67)
+        root = BTreeNode(67)
     
         # Left subtree
-        root.left = TreeNode(4)
+        root.left = BTreeNode(4)
     
         # Right subtree
-        root.right = TreeNode(23)
+        root.right = BTreeNode(23)
         
         return root
 
@@ -41,14 +41,14 @@ class SampleTree:
                  29
         """
         # Root
-        root = TreeNode(5)
+        root = BTreeNode(5)
     
         # Left subtree
-        root.left = TreeNode(41)
+        root.left = BTreeNode(41)
     
         # Right subtree
-        root.right = TreeNode(6)
-        root.right.left = TreeNode(29)
+        root.right = BTreeNode(6)
+        root.right.left = BTreeNode(29)
         
         return root
 
@@ -62,16 +62,16 @@ class SampleTree:
              7    15  8
         """
         # Root
-        root = TreeNode(10)
+        root = BTreeNode(10)
     
         # Left subtree
-        root.left = TreeNode(11)
-        root.left.left = TreeNode(7)
+        root.left = BTreeNode(11)
+        root.left.left = BTreeNode(7)
     
         # Right subtree
-        root.right = TreeNode(9)
-        root.right.left = TreeNode(15)
-        root.right.right = TreeNode(8)
+        root.right = BTreeNode(9)
+        root.right.left = BTreeNode(15)
+        root.right.right = BTreeNode(8)
         
         return root
 
@@ -89,19 +89,19 @@ class SampleTree:
                       4
         """
         # Root
-        root = TreeNode(10)
+        root = BTreeNode(10)
     
         # Left subtree
-        root.left = TreeNode(11)
-        root.left.left = TreeNode(7)
-        root.left.left.right = TreeNode(33)
+        root.left = BTreeNode(11)
+        root.left.left = BTreeNode(7)
+        root.left.left.right = BTreeNode(33)
     
         # Right subtree
-        root.right = TreeNode(9)
-        root.right.left = TreeNode(15)
-        root.right.right = TreeNode(8)
-        root.right.right.left = TreeNode(62)
-        root.right.right.left.right = TreeNode(4)
+        root.right = BTreeNode(9)
+        root.right.left = BTreeNode(15)
+        root.right.right = BTreeNode(8)
+        root.right.right.left = BTreeNode(62)
+        root.right.right.left.right = BTreeNode(4)
         
         return root
     
@@ -119,19 +119,19 @@ class SampleTree:
              8        4
         """
         # Root
-        root = TreeNode(10)
+        root = BTreeNode(10)
     
         # Left subtree
-        root.left = TreeNode(11)
-        root.left.left = TreeNode(7)
-        root.left.left.right = TreeNode(33)
-        root.left.left.right.left = TreeNode(8)
-        root.left.right = TreeNode(15)
-        root.left.right.right = TreeNode(62)
-        root.left.right.right.right = TreeNode(4)
+        root.left = BTreeNode(11)
+        root.left.left = BTreeNode(7)
+        root.left.left.right = BTreeNode(33)
+        root.left.left.right.left = BTreeNode(8)
+        root.left.right = BTreeNode(15)
+        root.left.right.right = BTreeNode(62)
+        root.left.right.right.right = BTreeNode(4)
     
         # Right subtree
-        root.right = TreeNode(9)
+        root.right = BTreeNode(9)
         
         return root
 
@@ -149,19 +149,19 @@ class SampleTree:
                 39     4
         """
         # Root
-        root = TreeNode(10)
+        root = BTreeNode(10)
     
         # Left subtree
-        root.left = TreeNode(11)
+        root.left = BTreeNode(11)
     
         # Right subtree
-        root.right = TreeNode(9)
-        root.right.left = TreeNode(15)
-        root.right.left.left = TreeNode(33)
-        root.right.left.left.left = TreeNode(39)
-        root.right.right = TreeNode(8)
-        root.right.right.left = TreeNode(62)
-        root.right.right.left.right = TreeNode(4)
+        root.right = BTreeNode(9)
+        root.right.left = BTreeNode(15)
+        root.right.left.left = BTreeNode(33)
+        root.right.left.left.left = BTreeNode(39)
+        root.right.right = BTreeNode(8)
+        root.right.right.left = BTreeNode(62)
+        root.right.right.left.right = BTreeNode(4)
     
         return root
 

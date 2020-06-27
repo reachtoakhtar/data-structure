@@ -5,7 +5,7 @@ def all_paths_from_root_to_leaf(node, path=[]):
     """
     Print all paths from root to leaf in a binary tree.
 
-    :param TreeNode node: A node of the tree.
+    :param BTreeNode node: A node of the tree.
     :return: nothing.
     :rtype: None
     """

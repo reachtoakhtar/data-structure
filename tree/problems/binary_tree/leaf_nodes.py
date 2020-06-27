@@ -7,7 +7,7 @@ def find_leaf_nodes(root):
     """
     Find the number of leaf nodes in a binary tree.
 
-    :param TreeNode root: The root of the tree.
+    :param BTreeNode root: The root of the tree.
     :return: the count of leaf nodes.
     :rtype: int
     """

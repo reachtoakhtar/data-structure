@@ -3,7 +3,7 @@ from collections import deque
 __author__ = "akhtar"
 
 
-class TreeNode:
+class BTreeNode:
     def __init__(self, data=None):
         self.data = data
         self.left = None

@@ -19,7 +19,7 @@ def find_diameter(root):
     """
     Find the diameter of a binary tree with given root.
 
-    :param TreeNode root: The root of the tree.
+    :param BTreeNode root: The root of the tree.
     :return: the diameter of the tree.
     :rtype: int
     """

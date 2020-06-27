@@ -33,7 +33,7 @@ def delete_node(root, data):
     """
     Delete a node from a binary tree with given root.
 
-    :param TreeNode root: The root of the tree.
+    :param BTreeNode root: The root of the tree.
     :param int data: The node data to delete.
     :return: nothing.
     :rtype: None

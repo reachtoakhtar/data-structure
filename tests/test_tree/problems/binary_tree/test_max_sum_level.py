@@ -2,7 +2,7 @@ __author__ = "akhtar"
 
 import unittest
 
-from tests.test_tree.utils import SampleTree
+from tests.test_tree.utils import SampleBTree
 from tree.problems.binary_tree.maximum_sum_level import level_with_maximum_sum
 
 
@@ -14,50 +14,50 @@ class TestMaxSumLevel(unittest.TestCase):
         print("TEST LEVEL OF MAXIMUM SUM IN A BINARY TREE")
         print("===========================================================")
         
-        root = SampleTree.create_1()
-        SampleTree.print_1()
+        root = SampleBTree.create_1()
+        SampleBTree.print_1()
         max_sum_level, sum = level_with_maximum_sum(root)
         print("Maximum sum = {0}".format(sum))
         print("Maximum sum level = {0}".format(max_sum_level), end=" ")
         print("\n\n")
         
-        root = SampleTree.create_3()
-        SampleTree.print_3()
+        root = SampleBTree.create_3()
+        SampleBTree.print_3()
         max_sum_level, sum = level_with_maximum_sum(root)
         print("Maximum sum = {0}".format(sum))
         print("Maximum sum level = {0}".format(max_sum_level), end=" ")
         print("\n\n")
         
-        root = SampleTree.create_4()
-        SampleTree.print_4()
+        root = SampleBTree.create_4()
+        SampleBTree.print_4()
         max_sum_level, sum = level_with_maximum_sum(root)
         print("Maximum sum = {0}".format(sum))
         print("Maximum sum level = {0}".format(max_sum_level), end=" ")
         print("\n\n")
         
-        root = SampleTree.create_6()
-        SampleTree.print_6()
+        root = SampleBTree.create_6()
+        SampleBTree.print_6()
         max_sum_level, sum = level_with_maximum_sum(root)
         print("Maximum sum = {0}".format(sum))
         print("Maximum sum level = {0}".format(max_sum_level), end=" ")
         print("\n\n")
         
-        root = SampleTree.create_9()
-        SampleTree.print_9()
+        root = SampleBTree.create_9()
+        SampleBTree.print_9()
         max_sum_level, sum = level_with_maximum_sum(root)
         print("Maximum sum = {0}".format(sum))
         print("Maximum sum level = {0}".format(max_sum_level))
         print("\n\n")
         
-        root = SampleTree.create_left_weighted()
-        SampleTree.print_left_weighted()
+        root = SampleBTree.create_left_weighted()
+        SampleBTree.print_left_weighted()
         max_sum_level, sum = level_with_maximum_sum(root)
         print("Maximum sum = {0}".format(sum))
         print("Maximum sum level = {0}".format(max_sum_level))
         print("\n\n")
         
-        root = SampleTree.create_right_weighted()
-        SampleTree.print_right_weighted()
+        root = SampleBTree.create_right_weighted()
+        SampleBTree.print_right_weighted()
         max_sum_level, sum = level_with_maximum_sum(root)
         print("Maximum sum = {0}".format(sum))
         print("Maximum sum level = {0}".format(max_sum_level))
